@@ -22,7 +22,7 @@ attr_reader :content, :author
   end
 
   # lit les gossips depuis un fichier CSV et les affiche
-  def self.read_csv
+  def self.all
     file_path = 'db/gossip.csv'
     unless File.exist?(file_path)
       puts "Le fichier #{file_path} n'existe pas."

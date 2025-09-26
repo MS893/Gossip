@@ -10,9 +10,11 @@ class Controller
 
   def create_gossip
     params = @view.create_gossip
+    gossip = Gossip.new(params[:author], params[:content])
+    gossip.save_csv
   end
 
-  def read_gossip
+  def index_gossips 
     gossips = Gossip.read_csv
     @view.display_all_gossips(gossips)
   end

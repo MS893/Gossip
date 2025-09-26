@@ -7,8 +7,13 @@ class View
   end
 
   def create_gossip
-    gossip = Gossip.new("Jean-Michel Concierge", "Féfé est de Bordeaux")
-    gossip.save_csv
+    # Gossip à saisir
+    clear_screen()
+    print "Nom de l'auteur   : "
+    gossip_author = gets.chomp.to_s
+    print "Contenu du gossip : "
+    gossip_content = gets.chomp.to_s
+    return params = { author: gossip_author, content: gossip_content }.
   end
 
   def display_all_gossips(gossips)
@@ -17,6 +22,11 @@ class View
       puts "#{index + 1}. #{gossip.author} a dit : #{gossip.content}"
     end
     puts "-" * 20
+  end
+
+  # efface l'écran
+  def clear_screen
+    system("clear")
   end
 
 end

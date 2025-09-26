@@ -29,7 +29,7 @@ class Router
         @controller.create_gossip
       when 2
         puts "Tu as choisi d'afficher les gossips" 
-        @controller.read_gossip
+        @controller.index_gossips
       when 3
         puts "Tu as choisi de supprimer un gossip" 
         @controller.delete_gossip
