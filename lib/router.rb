@@ -15,6 +15,7 @@ class Router
 
     while true
 
+      View.new.clear_screen()
       #on affiche le menu
       puts "Tu veux faire quoi jeune mouss' ?"
       puts "1\. Je veux créer un gossip"
